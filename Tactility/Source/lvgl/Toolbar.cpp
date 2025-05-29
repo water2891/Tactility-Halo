@@ -55,6 +55,9 @@ lv_obj_t* toolbar_create(lv_obj_t* parent, const std::string& title) {
 
     lv_obj_set_style_pad_all(obj, 0, 0);
     lv_obj_set_style_pad_gap(obj, 0, 0);
+    if(CONFIG_TT_ROUND_SCREEN){
+        lv_obj_set_style_pad_hor(obj, 25, 0);
+    }
 
     lv_obj_center(obj);
     lv_obj_set_flex_flow(obj, LV_FLEX_FLOW_ROW);

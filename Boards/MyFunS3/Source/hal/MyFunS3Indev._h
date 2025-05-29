@@ -1,0 +1,18 @@
+#pragma once
+
+#include "Tactility/hal/Device.h"
+
+#define TAG "indev"
+
+namespace tt::hal::indev {
+
+class IndevDevice : public Device {
+
+protected:
+
+public:
+  std::string getName() const final { return "LVGL_InDev"; }
+  std::string getDescription() const final { return "LVGL Input Device"; }
+}
+
+}

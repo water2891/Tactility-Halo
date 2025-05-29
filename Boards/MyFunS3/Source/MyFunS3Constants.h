@@ -1,0 +1,39 @@
+#pragma once
+
+#define I2C_SDA_IO_NUM GPIO_NUM_47
+#define I2C_SCL_IO_NUM GPIO_NUM_48
+
+#define SPI_MAIN_HOST SPI3_HOST
+#define SPI_MOSI_IO_NUM GPIO_NUM_40
+#define SPI_MISO_IO_NUM GPIO_NUM_NC
+#define SPI_SCLK_IO_NUM GPIO_NUM_39
+
+#define LCD_TOUCH_I2C_HOST I2C_NUM_0
+#define LCD_TOUCH_RESET GPIO_NUM_NC
+#define LCD_TOUCH_INT GPIO_NUM_45
+
+#define LCD_CS_IO_NUM GPIO_NUM_NC
+#define LCD_DC_IO_NUM GPIO_NUM_41
+#define LCD_RESET_IO_NUM GPIO_NUM_NC
+#define LCD_BACKLIGHT_IO_NUM GPIO_NUM_38
+#define LCD_HORIZONTAL_RESOLUTION 240
+#define LCD_VERTICAL_RESOLUTION 240
+#define LCD_DRAW_BUFFER_HEIGHT (LCD_VERTICAL_RESOLUTION / 10)
+#define LCD_DRAW_BUFFER_SIZE (LCD_HORIZONTAL_RESOLUTION * LCD_DRAW_BUFFER_HEIGHT)
+
+// GC9A01 屏幕旋转设置：
+// 0°: false, true, false;
+// 90°: true, false, false;
+// 180°: false, false, true;
+// 270°: true, true, true;
+#define LCD_SWAPXY false
+#define LCD_MIRRORX true
+#define LCD_MIRRORY false
+
+#define SPI_TRANSACTION_SIZE (LCD_DRAW_BUFFER_SIZE * (LV_COLOR_DEPTH / 8))
+
+#define TCA6408A_ADDRESS 0x20 // IO扩展
+#define QMI8658A_ADDRESS 0x6A // 6D姿态传感器
+#define ES8311_ADDRESS 0x18 // 音频编解码
+#define MAX17048_ADDRESS 0x36 // 电池监控
+#define QMC5883L_ADDRESS 0x0D // 地磁传感器

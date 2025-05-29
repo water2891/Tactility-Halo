@@ -105,6 +105,11 @@ public:
         TT_LOG_I(TAG, "%s", logo_path.c_str());
         lv_image_set_src(image, logo_path.c_str());
 
+        auto* bottom_label = lv_label_create(parent);
+        lv_label_set_text(bottom_label, TT_VERSION);
+        lv_obj_align(bottom_label, LV_ALIGN_BOTTOM_MID, 0, -20);
+        lv_obj_set_style_text_color(bottom_label, lv_color_hex(0xFFFFFF), 0);
+
         lvgl::obj_set_style_bg_blacken(parent);
 
         // Just in case this app is somehow resumed

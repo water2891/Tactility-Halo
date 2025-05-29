@@ -5,7 +5,7 @@
 #include <driver/i2c.h>
 #include <esp_err.h>
 #include <esp_lcd_touch.h>
-#include <esp_lcd_touch_cst816s.h>
+#include "esp_lcd_touch_cst816s/esp_lcd_touch_cst816s.h"
 #include <esp_lvgl_port.h>
 
 #define TAG "cst816s"

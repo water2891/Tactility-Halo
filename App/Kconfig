@@ -45,6 +45,8 @@ menu "Tactility App"
             bool "unPhone"
         config TT_BOARD_WAVESHARE_S3_TOUCH_43
             bool "Waveshare ESP32 S3 Touch LCD 4.3"
+        config TT_BOARD_MYFUN_S3
+            bool "Myfun S3"
         help
             Select a board/hardware configuration.
             Use TT_BOARD_CUSTOM if you will manually configure the board in your project.
@@ -57,4 +59,8 @@ menu "Tactility App"
         help
             The minimum time to show the splash screen in milliseconds.
             When set to 0, startup will continue to desktop as soon as boot operations are finished.
+
+    config TT_ROUND_SCREEN
+        bool "Check it if you're using a round screen"
+        default n
 endmenu

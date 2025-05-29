@@ -177,10 +177,12 @@ lv_obj_t* statusbar_create(lv_obj_t* parent) {
     lv_obj_set_style_margin_left(statusbar->time, 4, 0);
     update_time(statusbar);
 
-    auto* left_spacer = lv_obj_create(obj);
-    lv_obj_set_size(left_spacer, 1, 1);
-    obj_set_style_bg_invisible(left_spacer);
-    lv_obj_set_flex_grow(left_spacer, 1);
+    if(!CONFIG_TT_ROUND_SCREEN){
+        auto* left_spacer = lv_obj_create(obj);
+        lv_obj_set_size(left_spacer, 1, 1);
+        obj_set_style_bg_invisible(left_spacer);
+        lv_obj_set_flex_grow(left_spacer, 1);
+    }
 
     statusbar_lock(portMAX_DELAY);
     for (int i = 0; i < STATUSBAR_ICON_LIMIT; ++i) {

@@ -56,6 +56,9 @@
 #elif defined(CONFIG_TT_BOARD_WAVESHARE_S3_TOUCH_43)
 #include "WaveshareS3Touch43.h"
 #define TT_BOARD_HARDWARE &waveshare_s3_touch_43
+#elif defined(CONFIG_TT_BOARD_MYFUN_S3)
+#include "MyFunS3.h"
+#define TT_BOARD_HARDWARE &myfun_s3
 #else
 #define TT_BOARD_HARDWARE NULL
 #error Replace TT_BOARD_HARDWARE in main.c with your own. Or copy one of the ./sdkconfig.board.* files into ./sdkconfig.
